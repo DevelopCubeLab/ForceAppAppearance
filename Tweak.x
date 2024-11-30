@@ -11,7 +11,7 @@
 + (void)load {
     %orig;
 
-    // 强制使用深色模式
+    // 强制使用浅色模式
     if (@available(iOS 13.0, *)) {
         // 设置 UIWindow 的全局样式
         [[NSNotificationCenter defaultCenter] addObserverForName:UIWindowDidBecomeVisibleNotification
@@ -19,11 +19,11 @@
                                                            queue:[NSOperationQueue mainQueue]
                                                       usingBlock:^(NSNotification * _Nonnull note) {
             UIWindow *window = note.object;
-            window.overrideUserInterfaceStyle = UIUserInterfaceStyleDark;
+            window.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
         }];
 
         // 设置 UIView 的全局样式
-        [UIView appearance].overrideUserInterfaceStyle = UIUserInterfaceStyleDark;
+        [UIView appearance].overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
     }
 }
 
@@ -33,7 +33,7 @@
 
 - (UIUserInterfaceStyle)userInterfaceStyle {
     if (@available(iOS 13.0, *)) {
-        return UIUserInterfaceStyleDark; // 始终返回深色模式
+        return UIUserInterfaceStyleLight; // 始终返回浅色模式
     }
     return %orig;
 }
@@ -47,8 +47,8 @@
     %orig;
 
     if (@available(iOS 13.0, *)) {
-        // 在 view 即将显示时强制设置深色模式
-        self.overrideUserInterfaceStyle = UIUserInterfaceStyleDark;
+        // 在 view 即将显示时强制设置浅色模式
+        self.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
     }
 }
 
