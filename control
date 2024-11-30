@@ -1,8 +1,8 @@
-Package: com.developlab.forcedarkappearance
-Name: ForceDarkAppearance
+Package: com.developlab.forcelightappearance
+Name: ForceLightAppearance
 Version: 1.0
 Architecture: iphoneos-arm
-Description: Force app dark appearance
+Description: Force app light appearance
 Maintainer: developlab
 Author: developlab
 Section: Tweaks
