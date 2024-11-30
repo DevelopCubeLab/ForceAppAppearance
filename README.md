@@ -1,6 +1,6 @@
 # ForceAppAppearance
 iOS Tweaks force app dark or light appearance  
-**The App itself does not support dark appearance, and the injected plug-in has no effect. **
+**The App itself does not support dark appearance, and the injected plug-in has no effect.**  
 
 iOS 插件 强制App使用深色或者浅色模式，解决某些app不提供切换深色/浅色模式的开关。  
 **App本身不支持深色模式的，注入插件也无效。**
